@@ -17,15 +17,13 @@ explicitly pass a shared secret, for example:
 
 ```
 $ node
-
-const { utils } = require("@reso/reso-certification-common");
-const secretKey = utils.encryption.createSecretKey("ohai");
-const encrypted = utils.encryption.encryptSync("yo", { secretKey });
-
-console.log(utils.encryption.decryptSync(encrypted, { secretKey }));
-
-$ yo
-
+Welcome to Node.js v15.0.1.
+Type ".help" for more information.
+> const { utils } = require("@reso/reso-certification-common");
+> const secretKey = utils.encryption.createSecretKey("ohai");
+> const encrypted = utils.encryption.encryptSync("yo", { secretKey });
+> console.log(utils.encryption.decryptSync(encrypted, { secretKey }));
+yo
 ```
 
 An exception will be thrown unless a non-zero length secretKey is present.
