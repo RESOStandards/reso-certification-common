@@ -16,8 +16,16 @@ would either have `CONFIG_FILE_SHARED_SECRET` defined in .env or
 explicitly pass a shared secret, for example:
 
 ```
-secretKey = utils.encryption.createSecretKey("ohai");
-utils.encryption.encryptSync(<string to encrypt>, { secretKey });
+$ node
+
+const { utils } = require("@reso/reso-certification-common");
+const secretKey = utils.encryption.createSecretKey("ohai");
+const encrypted = utils.encryption.encryptSync("yo", { secretKey });
+
+console.log(utils.encryption.decryptSync(encrypted, { secretKey }));
+
+$ yo
+
 ```
 
 An exception will be thrown unless a non-zero length secretKey is present.
