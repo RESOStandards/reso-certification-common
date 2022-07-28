@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RESOStandards/reso-certification-common#readme",
   "dependencies": {
+    "@reso/reso-certification-common": "github:RESOStandards/reso-certification-common",
     "dotenv": "^16.0.1"
   },
   "devDependencies": {

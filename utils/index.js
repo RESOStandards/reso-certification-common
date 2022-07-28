@@ -1,4 +1,5 @@
 module.exports = {
   compression: require('./compression'),
-  encryption: require('./encryption')
+  encryption: require('./encryption'),
+  constants: require('./constants')
 };
