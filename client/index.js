@@ -414,7 +414,7 @@ const chartOptions = {
         toolTip: 'RESO IDX Payload data elements'
       }
     ]
-  }
+  },
   // all: {
   //   label: "Standard vs. Local",
   //   value: "all",
@@ -428,6 +428,13 @@ const chartOptions = {
   //   chartComp: "IndustryComparisonChart",
   //   showHelpBox: false,
   // },
+  performance: {
+    label: 'Performance',
+    value: 'performance',
+    chartComp: 'PerformanceChart',
+    showHelpBox: true,
+    description: "Measurements of the system's speed and data delivery capabilities."
+  }
 };
 
 const dataDictionaryStandardResources = [
