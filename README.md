@@ -1,18 +1,29 @@
 # RESO Certification Common Library
+
 NodeJS Package Containing Common Certification Functions
 
 # Installation
+
 To install from GitHub:
 
 ```
 npm i RESOStandards/reso-certification-common
 ```
 
+To install from Github via yarn:
+
+add package `@reso/reso-certification-common` and yarn install --check-files. After that build the docker container.
+
+```
+"@reso/reso-certification-common": "https://github.com/RESOStandards/reso-certification-common"
+```
+
 ## Usage
+
 For examples, see [`test/utils.js`](./test/utils.js).
 
-For `utils.encryption` utilities, the assumption is that the client 
-would either have `CONFIG_FILE_SHARED_SECRET` defined in .env or 
+For `utils.encryption` utilities, the assumption is that the client
+would either have `CONFIG_FILE_SHARED_SECRET` defined in .env or
 explicitly pass a shared secret, for example:
 
 ```
@@ -29,12 +40,15 @@ yo
 An exception will be thrown unless a non-zero length secretKey is present.
 
 ## Tests
+
 To run the tests, clone the repository:
+
 ```
 git clone https://github.com/RESOStandards/reso-certification-common.git
 ```
 
 Then change into the directory and run:
+
 ```
 npm i
 ```
@@ -44,3 +58,14 @@ Finally:
 ```
 npm test
 ```
+
+## Testing locally
+
+To test the changes that you have pushed onto the common repo, you have to point the branch of common repo as below:
+
+```
+"@reso/reso-certification-common": "https://github.com/RESOStandards/reso-certification-common#<branch-name>"
+
+```
+
+Before that, remove the existing common package and use the above command to get the latest changes on repo and do a `yarn install --check-files` and do a docker build.
