@@ -1,18 +1,13 @@
-// homepage
-
-//header
-export const userTypes = {
+const userTypes = {
   admins: 'admins',
   providers: 'providers',
   normalUsers: 'normal-users',
   recipients: 'recipients'
 };
 
-// help url
-export const resoHelpUrl = 'https://certification-help.reso.org';
+const resoHelpUrl = 'https://certification-help.reso.org';
 
-//page context
-export const userPageContext = {
+const userPageContext = {
   summary: 'summary-report',
   'data-dictionary': 'data-dictionary-report',
   'web-api': 'web-api-report',
@@ -21,9 +16,7 @@ export const userPageContext = {
   endorsements: 'endorsements'
 };
 
-// report filters
-//endorsmentOptions
-export const endorsementOptions = [
+const filterEndorsementOptions = [
   {
     label: 'All',
     value: ''
@@ -44,8 +37,8 @@ export const endorsementOptions = [
     value: 'payloads'
   }
 ];
-// statusptions
-export const statusOptions = [
+
+const certificationStatusOptions = [
   {
     label: 'All',
     shortLabel: 'All',
@@ -147,8 +140,7 @@ export const statusOptions = [
   }
 ];
 
-//sort byt options
-export const sortByOptions = [
+const filterSortByOptions = [
   {
     label: 'Ascending',
     value: 'asc',
@@ -161,18 +153,17 @@ export const sortByOptions = [
   }
 ];
 
-// common project constants on FE
-export const DEFAULT_PAGE_TITLE = `RESO - Real Estate Standards Organization`;
+const defaultPageTitle = `RESO - Real Estate Standards Organization`;
 
-export const RESO_TERMS = 'reso_terms';
+const cookiesResoTerms = 'reso_terms';
 
-export const RESO_TERMS_ACCEPTED_ON = 'terms_accepted';
+const cookiesResoTermsAcceptedOn = 'terms_accepted';
 
-export const PROVIDER_EXPANSION_RESOURCES = 'resource_expansion';
+const cookiesProviderExpansionResources = 'resource_expansion';
 
-export const DATE_TIME_OUTPUT_FORMAT = 'MMM D YYYY [at] h:mm a';
+const dateTimeOutputFormat = 'MMM D YYYY [at] h:mm a';
 
-export const RESO_TERMS_TEXT = `REAL ESTATE STANDARDS ORGANIZATION 
+const resoTermsText = `REAL ESTATE STANDARDS ORGANIZATION 
 CERTIFICATION TERMS AND CONDITIONS
 
 
@@ -217,10 +208,7 @@ Email:    sam@reso.org
 
 April 15, 2022`;
 
-//Certification Request
-
-// cerdential options
-export const credentialOptions = {
+const certificationRequestCredentialOptions = {
   input_credentials: {
     bearer_token: {
       value: 'bearer_token',
@@ -237,9 +225,7 @@ export const credentialOptions = {
   }
 };
 
-//CErtification Request
-// endorsement options with roles
-export const endorsementOptions = {
+const certificationRequestEndorsementOptions = {
   data_dictionary_1_7_with_IDX_payload: {
     label: 'Data Dictionary 1.7 with IDX Payload',
     value: 'data_dictionary_1_7_with_IDX_payload',
@@ -276,8 +262,7 @@ export const endorsementOptions = {
   }
 };
 
-//client/constants/resourceList.js
-export const resourcesByOrder = [
+const resourcesListResourcesByOrder = [
   'Property',
   'Member',
   'Office',
@@ -306,7 +291,7 @@ export const resourcesByOrder = [
   'Lookup'
 ];
 
-export const RESOURCES = {
+const resourcesListResources = {
   reso: [
     'ContactListingNotes',
     'ContactListings',
@@ -338,8 +323,7 @@ export const RESOURCES = {
   idx: ['Property', 'Member', 'Office', 'Media', 'OpenHouse', 'PropertyGreenVerification']
 };
 
-// client/constants/dataDictionaryFilters.js
-export const filters = {
+const dataDictionaryFilters = {
   ALL: {
     name: 'total',
     label: 'All'
@@ -358,7 +342,7 @@ export const filters = {
   }
 };
 
-export const sliderTicks = {
+const dataDictionarySliderTicks = {
   0: {
     label: '0%',
     value: 'eqZero',
@@ -391,8 +375,7 @@ export const sliderTicks = {
   }
 };
 
-// client/components/DetailReport/types/DataDictionary/MetadataViewer/Details/ResourceDetails/index.js
-export const standardResources = [
+const dataDictionaryStandardResources = [
   'Property',
   'Member',
   'Office',
@@ -421,7 +404,7 @@ export const standardResources = [
   'Lookup'
 ];
 
-export const standardResourcesUrls = {
+const dataDictionaryStandardResourcesUrls = {
   Property: 'https://ddwiki.reso.org/display/DDW17/Property+Resource',
   Member: 'https://ddwiki.reso.org/display/DDW17/Member+Resource',
   Office: 'https://ddwiki.reso.org/display/DDW17/Office+Resource',
@@ -451,8 +434,7 @@ export const standardResourcesUrls = {
   Lookup: ''
 };
 
-// client/components/DetailReport/Acceptance/constants.js
-export const screenContents = {
+const acceptanceScreenContents = {
   provider: {
     difference: {
       description:
@@ -478,7 +460,7 @@ export const screenContents = {
   }
 };
 
-export const screenFlow = {
+const screenFlows = {
   data_dictionary: {
     provider: ['difference', 'performance', 'email'],
     recipient: ['difference', 'performance', 'terms']
@@ -487,4 +469,29 @@ export const screenFlow = {
     provider: ['performance', 'email'],
     recipient: ['performance', 'terms']
   }
+};
+
+module.exports = {
+  userTypes,
+  resoHelpUrl,
+  userPageContext,
+  filterEndorsementOptions,
+  certificationStatusOptions,
+  filterSortByOptions,
+  defaultPageTitle,
+  cookiesResoTerms,
+  cookiesResoTermsAcceptedOn,
+  cookiesProviderExpansionResources,
+  dateTimeOutputFormat,
+  resoTermsText,
+  certificationRequestCredentialOptions,
+  certificationRequestEndorsementOptions,
+  resourcesListResourcesByOrder,
+  resourcesListResources,
+  dataDictionaryFilters,
+  dataDictionarySliderTicks,
+  dataDictionaryStandardResources,
+  dataDictionaryStandardResourcesUrls,
+  acceptanceScreenContents,
+  screenFlows
 };
