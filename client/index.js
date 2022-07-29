@@ -342,7 +342,7 @@ const dataDictionaryFilters = {
   }
 };
 
-const dataDictionarySliderTicks = {
+const sliderTicksFilter = {
   0: {
     label: '0%',
     value: 'eqZero',
@@ -375,6 +375,61 @@ const dataDictionarySliderTicks = {
   }
 };
 
+const chartOptions = {
+  dataElements: {
+    label: 'Data Elements',
+    value: 'dataElements',
+    description: 'Which kinds of standard and local data reside on this system.',
+    subCharts: [
+      {
+        label: 'All',
+        value: 'all',
+        parentValue: 'dataElements',
+        showHelpBox: true,
+        chartComp: 'AllChart',
+        toolTip: 'RESO and Local data elements'
+      },
+      {
+        label: 'RESO',
+        value: 'reso',
+        parentValue: 'dataElements',
+        chartComp: 'RESOChart',
+        showHelpBox: true,
+        toolTip: 'Standard data elements'
+      },
+      {
+        label: 'Local',
+        value: 'local',
+        parentValue: 'dataElements',
+        showHelpBox: true,
+        chartComp: 'LocalChart',
+        toolTip: 'Other data elements'
+      },
+      {
+        label: 'IDX',
+        value: 'idx',
+        parentValue: 'dataElements',
+        showHelpBox: true,
+        chartComp: 'IDXChart',
+        toolTip: 'RESO IDX Payload data elements'
+      }
+    ]
+  }
+  // all: {
+  //   label: "Standard vs. Local",
+  //   value: "all",
+  //   description:
+  //     "Standard vs. Local Resources, Fields and Lookups and market averages.",
+  // },
+  // industryComparison: {
+  //   label: "Industry Comparison",
+  //   value: "industryComparison",
+  //   description: "How this system's data set compares to other certified systems.",
+  //   chartComp: "IndustryComparisonChart",
+  //   showHelpBox: false,
+  // },
+};
+
 const dataDictionaryStandardResources = [
   'Property',
   'Member',
@@ -404,34 +459,19 @@ const dataDictionaryStandardResources = [
   'Lookup'
 ];
 
-const dataDictionaryStandardResourcesUrls = {
-  Property: 'https://ddwiki.reso.org/display/DDW17/Property+Resource',
-  Member: 'https://ddwiki.reso.org/display/DDW17/Member+Resource',
-  Office: 'https://ddwiki.reso.org/display/DDW17/Office+Resource',
-  Contacts: 'https://ddwiki.reso.org/display/DDW17/Contacts+Resource',
-  Media: 'https://ddwiki.reso.org/display/DDW17/Media+Resource',
-  HistoryTransactional: 'https://ddwiki.reso.org/display/DDW17/HistoryTransactional+Resource',
-  ContactListings: 'https://ddwiki.reso.org/display/DDW17/ContactListings+Resource',
-  InternetTracking: 'https://ddwiki.reso.org/display/DDW17/InternetTracking+Resource',
-  SavedSearch: 'https://ddwiki.reso.org/display/DDW17/SavedSearch+Resource',
-  OpenHouse: 'https://ddwiki.reso.org/display/DDW17/OpenHouse+Resource',
-  Prospecting: 'https://ddwiki.reso.org/display/DDW17/Prospecting+Resource',
-  Queue: 'https://ddwiki.reso.org/display/DDW17/Queue+Resource',
-  Rules: 'https://ddwiki.reso.org/display/DDW17/Rules+Resource',
-  Teams: 'https://ddwiki.reso.org/display/DDW17/Teams+Resource',
-  Showing: 'https://ddwiki.reso.org/display/DDW17/Showing+Resource',
-  TeamMembers: 'https://ddwiki.reso.org/display/DDW17/TeamMembers+Resource',
-  OUID: 'https://ddwiki.reso.org/display/DDW17/OUID+Resource',
-  ContactListingNotes: 'https://ddwiki.reso.org/display/DDW17/ContactListingNotes+Resource',
-  OtherPhone: 'https://ddwiki.reso.org/display/DDW17/OtherPhone+Resource',
-  PropertyGreenVerification:
-    'https://ddwiki.reso.org/display/DDW17/PropertyGreenVerification+Resource',
-  PropertyPowerProduction: 'https://ddwiki.reso.org/display/DDW17/PropertyPowerProduction+Resource',
-  PropertyRooms: 'https://ddwiki.reso.org/display/DDW17/PropertyRooms+Resource',
-  PropertyUnitTypes: 'https://ddwiki.reso.org/display/DDW17/PropertyUnitTypes+Resource',
-  SocialMedia: 'https://ddwiki.reso.org/display/DDW17/SocialMedia+Resource',
-  Field: '',
-  Lookup: ''
+const detailedReportTypes = {
+  data_dictionary_1_7_with_IDX_payload: {
+    label: 'Data Dictionary 1.7 with IDX Payload',
+    value: 'data_dictionary_1_7_with_IDX_payload'
+  },
+  data_dictionary: {
+    label: 'Data Dictionary',
+    value: 'data_dictionary'
+  },
+  web_api_server_core: {
+    label: 'Web API Server Core',
+    value: 'web_api_server_core'
+  }
 };
 
 const acceptanceScreenContents = {
@@ -489,9 +529,10 @@ module.exports = {
   resourcesListResourcesByOrder,
   resourcesListResources,
   dataDictionaryFilters,
-  dataDictionarySliderTicks,
+  sliderTicksFilter,
+  chartOptions,
   dataDictionaryStandardResources,
-  dataDictionaryStandardResourcesUrls,
+  detailedReportTypes,
   acceptanceScreenContents,
   screenFlows
 };
