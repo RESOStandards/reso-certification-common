@@ -98,16 +98,6 @@ const certificationStatusOptions = [
     icon: 'notifications-updated',
     priority: 4
   },
-  // {
-  //   label: "Canceled",
-  //   shortLabel: "Canceled",
-  //   value: "canceled",
-  //   bgColor: "bg-red-100",
-  //   textColor: "text-red-500",
-  //   borderColor: "border-red-600",
-  //   icon: "remove",
-  //   priority: 5,
-  // },
   {
     label: 'Revoked',
     shortLabel: 'Revoked',
@@ -262,67 +252,6 @@ const certificationRequestEndorsementOptions = {
   }
 };
 
-const resourcesListResourcesByOrder = [
-  'Property',
-  'Member',
-  'Office',
-  'Contacts',
-  'Media',
-  'HistoryTransactional',
-  'ContactListings',
-  'InternetTracking',
-  'SavedSearch',
-  'OpenHouse',
-  'Prospecting',
-  'Queue',
-  'Rules',
-  'Teams',
-  'Showing',
-  'TeamMembers',
-  'OUID',
-  'ContactListingNotes',
-  'OtherPhone',
-  'PropertyGreenVerification',
-  'PropertyPowerProduction',
-  'PropertyRooms',
-  'PropertyUnitTypes',
-  'SocialMedia',
-  'Field',
-  'Lookup'
-];
-
-const resourcesListResources = {
-  reso: [
-    'ContactListingNotes',
-    'ContactListings',
-    'Contacts',
-    'Field',
-    'HistoryTransactional',
-    'InternetTracking',
-    'Lookup',
-    'Media',
-    'Member',
-    'OUID',
-    'Office',
-    'OpenHouse',
-    'OtherPhone',
-    'Property',
-    'PropertyGreenVerification',
-    'PropertyPowerProduction',
-    'PropertyRooms',
-    'PropertyUnitTypes',
-    'Prospecting',
-    'Queue',
-    'Rules',
-    'SavedSearch',
-    'Showing',
-    'SocialMedia',
-    'TeamMembers',
-    'Teams'
-  ],
-  idx: ['Property', 'Member', 'Office', 'Media', 'OpenHouse', 'PropertyGreenVerification']
-};
-
 const dataDictionaryFilters = {
   ALL: {
     name: 'total',
@@ -374,97 +303,6 @@ const sliderTicksFilter = {
     tickValue: 100
   }
 };
-
-const chartOptions = {
-  dataElements: {
-    label: 'Data Elements',
-    value: 'dataElements',
-    description: 'Which kinds of standard and local data reside on this system.',
-    subCharts: [
-      {
-        label: 'All',
-        value: 'all',
-        parentValue: 'dataElements',
-        showHelpBox: true,
-        chartComp: 'AllChart',
-        toolTip: 'RESO and Local data elements'
-      },
-      {
-        label: 'RESO',
-        value: 'reso',
-        parentValue: 'dataElements',
-        chartComp: 'RESOChart',
-        showHelpBox: true,
-        toolTip: 'Standard data elements'
-      },
-      {
-        label: 'Local',
-        value: 'local',
-        parentValue: 'dataElements',
-        showHelpBox: true,
-        chartComp: 'LocalChart',
-        toolTip: 'Other data elements'
-      },
-      {
-        label: 'IDX',
-        value: 'idx',
-        parentValue: 'dataElements',
-        showHelpBox: true,
-        chartComp: 'IDXChart',
-        toolTip: 'RESO IDX Payload data elements'
-      }
-    ]
-  },
-  // all: {
-  //   label: "Standard vs. Local",
-  //   value: "all",
-  //   description:
-  //     "Standard vs. Local Resources, Fields and Lookups and market averages.",
-  // },
-  // industryComparison: {
-  //   label: "Industry Comparison",
-  //   value: "industryComparison",
-  //   description: "How this system's data set compares to other certified systems.",
-  //   chartComp: "IndustryComparisonChart",
-  //   showHelpBox: false,
-  // },
-  performance: {
-    label: 'Performance',
-    value: 'performance',
-    chartComp: 'PerformanceChart',
-    showHelpBox: true,
-    description: "Measurements of the system's speed and data delivery capabilities."
-  }
-};
-
-const dataDictionaryStandardResources = [
-  'Property',
-  'Member',
-  'Office',
-  'Contacts',
-  'Media',
-  'HistoryTransactional',
-  'ContactListings',
-  'InternetTracking',
-  'SavedSearch',
-  'OpenHouse',
-  'Prospecting',
-  'Queue',
-  'Rules',
-  'Teams',
-  'Showing',
-  'TeamMembers',
-  'OUID',
-  'ContactListingNotes',
-  'OtherPhone',
-  'PropertyGreenVerification',
-  'PropertyPowerProduction',
-  'PropertyRooms',
-  'PropertyUnitTypes',
-  'SocialMedia',
-  'Field',
-  'Lookup'
-];
 
 const detailedReportTypes = {
   data_dictionary_1_7_with_IDX_payload: {
@@ -533,12 +371,8 @@ module.exports = {
   resoTermsText,
   certificationRequestCredentialOptions,
   certificationRequestEndorsementOptions,
-  resourcesListResourcesByOrder,
-  resourcesListResources,
   dataDictionaryFilters,
   sliderTicksFilter,
-  chartOptions,
-  dataDictionaryStandardResources,
   detailedReportTypes,
   acceptanceScreenContents,
   screenFlows
