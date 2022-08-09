@@ -215,6 +215,11 @@ const detailedReportTypes = {
   }
 };
 
+const statusConstants = certificationStatusOptions.reduce((result, statusOption) => {
+  result[statusOption.value] = statusOption;
+  return result;
+}, {});
+
 module.exports = {
   resoHelpUrl,
   filterEndorsementOptions,
@@ -223,5 +228,6 @@ module.exports = {
   certificationRequestCredentialOptions,
   certificationRequestEndorsementOptions,
   dataDictionaryFilters,
-  detailedReportTypes
+  detailedReportTypes,
+  statusConstants
 };
